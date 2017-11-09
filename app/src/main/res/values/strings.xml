@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SpiderApp</string>
+    <string name="title_activity_base_actvity">BaseActvity</string>
+</resources>
