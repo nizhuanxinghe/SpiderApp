@@ -1,19 +1,14 @@
 package com.example.chuwenbin.spiderapp.ui.mvp.biz;
 
-import android.app.Activity;
 import android.content.Context;
 
+import com.example.chuwenbin.spiderapp.net.RequestManager;
+import com.example.chuwenbin.spiderapp.ui.mvp.bean.SpiderRequestBean;
 import com.example.chuwenbin.spiderapp.utils.Config;
 import com.example.chuwenbin.spiderapp.utils.LogUtil;
-import com.example.chuwenbin.spiderapp.utils.NetworkUtil;
+import com.google.gson.Gson;
 
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import java.util.HashMap;
 
 /**
  * Created by chuwenbin on 17/11/9.
@@ -27,30 +22,45 @@ public class ICapSheetBiz extends IBiz {
         this.mContext = context;
     }
 
-    public void capGuitarSheet(final Context context, final RequestListener requestListener) {
+    public void capGuitarSheet(final Context context, SpiderRequestBean data, final RequestListener requestListener) {
 
-        OkHttpClient okHttpClient = new OkHttpClient();
+//        OkHttpClient okHttpClient = new OkHttpClient();
+//
+//        final Request request = new Request.Builder().url(Config.NetConfig.GET_GUITAR_SHEET_URL).build();
+//        Call call = okHttpClient.newCall(request);
+//
+//        if (!NetworkUtil.isNetworkAvailable((Activity) context)) {
+//            LogUtil.d("network error");
+//            return;
+//        }
+//        call.enqueue(new Callback() {
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                requestListener.onFailure(call.toString());
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//                requestListener.onSuccess(response);
+//
+//            }
+//        });
 
         LogUtil.d("url:" + Config.NetConfig.GET_GUITAR_SHEET_URL);
+        HashMap<String, String> params = new HashMap<>();
+        Gson gson = new Gson();
+        String jsonStr = gson.toJson(data);
+        params.put("data", jsonStr);
+        RequestManager.getInstance(context).requestAsyn(Config.NetConfig.GET_GUITAR_SHEET_URL, RequestManager.TYPE_POST_JSON, params, new RequestManager.ReqCallBack<String>() {
 
-        final Request request = new Request.Builder().url(Config.NetConfig.GET_GUITAR_SHEET_URL).build();
-
-        Call call = okHttpClient.newCall(request);
-
-        if(!NetworkUtil.isNetworkAvailable((Activity) context)){
-            LogUtil.d("network error");
-            return;
-        }
-        call.enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                requestListener.onFailure(call, e);
+            public void onReqSuccess(String result) {
+                requestListener.onSuccess(result);
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                requestListener.onSuccess(call, response);
-
+            public void onReqFailed(String errorMsg) {
+                requestListener.onFailure(errorMsg);
             }
         });
     }

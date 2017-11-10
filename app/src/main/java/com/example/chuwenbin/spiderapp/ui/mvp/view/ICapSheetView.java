@@ -9,7 +9,7 @@ import com.example.chuwenbin.spiderapp.ui.mvp.bean.GuitarSheetBean;
  */
 
 public interface ICapSheetView{
-    void toActivity();
+    void toActivity(GuitarSheetBean.DataList data);
     Context getContext();
 
     void showSheetList(GuitarSheetBean data);

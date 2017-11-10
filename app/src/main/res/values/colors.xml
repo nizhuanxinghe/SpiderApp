@@ -3,4 +3,20 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="btn_color_disable">#33000000</color>
+    <color name="btn_color_normal">#90da43</color>
+    <color name="btn_color_pressed">#BB5C1F</color>
+
+    <color name="text_color_gray">#66000000</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_orange">#90da43</color>
+    <color name="text_color_span">#717071</color>
+    <color name="text_color_black">#e6000000</color>
+
+    <color name="line_gray">#1a000000</color>
+    <color name="line_edit">#66000000</color>
+
+    <color name="white">#FFFFFF</color>
+
 </resources>

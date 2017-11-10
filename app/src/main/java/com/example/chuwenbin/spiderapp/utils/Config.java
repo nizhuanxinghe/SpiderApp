@@ -6,8 +6,7 @@ package com.example.chuwenbin.spiderapp.utils;
 
 public class Config {
 
-    public static final String ROOT_URL = "http://10.0.0.171:8000/";
-
+    public static final String ROOT_URL = "http://192.168.1.4:8000/";
 
     public static class NetConfig{
         public static final String GET_GUITAR_SHEET_URL = ROOT_URL + "server/getGuitarSheet";
