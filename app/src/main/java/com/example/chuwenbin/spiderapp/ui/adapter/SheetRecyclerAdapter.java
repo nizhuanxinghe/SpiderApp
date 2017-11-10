@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.chuwenbin.spiderapp.R;
 import com.example.chuwenbin.spiderapp.ui.mvp.bean.GuitarSheetBean;
+import com.example.chuwenbin.spiderapp.utils.LogUtil;
 
 /**
  * Created by chuwenbin on 17/11/9.
@@ -46,7 +47,11 @@ public class SheetRecyclerAdapter extends RecyclerView.Adapter<SheetRecyclerAdap
                 mItemSelectListener.onChecked(position);
             }
         });
-        holder.tvSheetName.setText(mGuitarSheetBean.getDataList().get(position).toString());
+
+        GuitarSheetBean.DataList data = mGuitarSheetBean.getDataList().get(position);
+        holder.tvSheetName.setText(data.getTitle()+"");
+
+        LogUtil.d("title:" + data.getTitle() + ",id:" + data.getId() + ",link" + data.getLink());
     }
 
     @Override
@@ -58,6 +63,7 @@ public class SheetRecyclerAdapter extends RecyclerView.Adapter<SheetRecyclerAdap
 
         TextView tvSheetName;
         View contentView;
+
         public MyViewHolder(View view) {
             super(view);
             contentView = view;

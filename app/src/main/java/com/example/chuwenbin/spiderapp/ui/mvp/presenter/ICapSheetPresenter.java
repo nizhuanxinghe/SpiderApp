@@ -1,18 +1,16 @@
 package com.example.chuwenbin.spiderapp.ui.mvp.presenter;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 
 import com.example.chuwenbin.spiderapp.ui.mvp.bean.GuitarSheetBean;
+import com.example.chuwenbin.spiderapp.ui.mvp.bean.SpiderRequestBean;
 import com.example.chuwenbin.spiderapp.ui.mvp.biz.IBiz;
 import com.example.chuwenbin.spiderapp.ui.mvp.biz.ICapSheetBiz;
 import com.example.chuwenbin.spiderapp.ui.mvp.view.ICapSheetView;
 import com.example.chuwenbin.spiderapp.utils.LogUtil;
 import com.google.gson.Gson;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Response;
 
 /**
  * Created by chuwenbin on 17/11/9.
@@ -25,6 +23,7 @@ public class ICapSheetPresenter {
 
     private GuitarSheetBean mGuitarSheetBean;
 
+    private Handler mHandler = new Handler(Looper.getMainLooper());
 
     public ICapSheetPresenter(ICapSheetView iCapSheetView) {
         this.mICapSheetView = iCapSheetView;
@@ -33,23 +32,29 @@ public class ICapSheetPresenter {
 
     }
 
-    public synchronized void capGuitarSheet() {
+    public synchronized void capGuitarSheet(SpiderRequestBean data) {
         LogUtil.d(">>>>>>>>>>>>>>>>>>>>>capGuitarSheet<<<<<<<<<<<<<<<<<<<<<<<");
 
-        mICapSheetBiz.capGuitarSheet(mContext, new IBiz.RequestListener() {
+        mICapSheetBiz.capGuitarSheet(mContext, data, new IBiz.RequestListener() {
             @Override
-            public void onSuccess(Call call, Response response) {
-                String respStr = response.body().toString();
-                LogUtil.d("respStr:" + respStr);
+            public void onSuccess(String resp) {
 
-                mGuitarSheetBean = new Gson().fromJson(respStr, GuitarSheetBean.class);
+                LogUtil.d("respStr:" + resp);
 
-                mICapSheetView.showSheetList(mGuitarSheetBean);
+                mGuitarSheetBean = new Gson().fromJson(resp, GuitarSheetBean.class);
+
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mICapSheetView.showSheetList(mGuitarSheetBean);
+                    }
+                });
+
             }
 
             @Override
-            public void onFailure(Call call, IOException e) {
-                LogUtil.e(e.getMessage());
+            public void onFailure(String errorMsg) {
+                LogUtil.e(errorMsg);
             }
         });
     }

@@ -9,17 +9,17 @@ import java.util.List;
 public class GuitarSheetBean{
 
 
-    private List<DataListBean> dataList;
+    private List<DataList> dataList;
 
-    public List<DataListBean> getDataList() {
+    public List<DataList> getDataList() {
         return dataList;
     }
 
-    public void setDataList(List<DataListBean> dataList) {
+    public void setDataList(List<DataList> dataList) {
         this.dataList = dataList;
     }
 
-    public static class DataListBean {
+    public static class DataList {
         /**
          * id : 139
          * link : http://www.17jita.com/tab/tab/img/7899.html

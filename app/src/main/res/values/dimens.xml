@@ -1,3 +1,15 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="btn_height">36dp</dimen>
+    <dimen name="btn_width">310dp</dimen>
+    <dimen name="edit_height">35dp</dimen>
+    <dimen name="btn_corner">18dp</dimen>
+    <dimen name="edit_corner">17.5dp</dimen>
+    <dimen name="card_corner">12dp</dimen>
+
+    <dimen name="line_width">0.5dp</dimen>
+
+    <dimen name="page_padding">12dp</dimen>
+    <dimen name="item_margin">8dp</dimen>
 </resources>
