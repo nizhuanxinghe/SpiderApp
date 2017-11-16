@@ -12,4 +12,6 @@
 
     <dimen name="page_padding">12dp</dimen>
     <dimen name="item_margin">8dp</dimen>
+
+    <dimen name="text_size">16dp</dimen>
 </resources>

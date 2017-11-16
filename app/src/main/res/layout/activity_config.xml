@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chuwenbin.spiderapp.ui.mvp.activity.ConfigActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_first"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="root url:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_rootUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sec"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_first"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="url class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_urlClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_third"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_sec"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="head title:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_headTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_fourth"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_third"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="page class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_pageClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_fifth"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_fourth"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="obj class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_objClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_saveConfig"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/drawable_btn"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/text_color_white"
+        android:text="Save"/>
+</android.support.constraint.ConstraintLayout>
