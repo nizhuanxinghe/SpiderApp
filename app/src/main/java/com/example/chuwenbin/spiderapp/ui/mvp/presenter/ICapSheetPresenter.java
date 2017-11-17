@@ -10,6 +10,7 @@ import com.example.chuwenbin.spiderapp.ui.mvp.biz.IBiz;
 import com.example.chuwenbin.spiderapp.ui.mvp.biz.ICapSheetBiz;
 import com.example.chuwenbin.spiderapp.ui.mvp.view.ICapSheetView;
 import com.example.chuwenbin.spiderapp.utils.LogUtil;
+import com.example.chuwenbin.spiderapp.utils.ToastUtil;
 import com.google.gson.Gson;
 
 /**
@@ -55,6 +56,7 @@ public class ICapSheetPresenter {
             @Override
             public void onFailure(String errorMsg) {
                 LogUtil.e(errorMsg);
+                ToastUtil.showToast(errorMsg);
             }
         });
     }

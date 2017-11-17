@@ -1,17 +1,36 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
 
+    <!--scale size-->
     <dimen name="btn_height">36dp</dimen>
     <dimen name="btn_width">310dp</dimen>
     <dimen name="edit_height">35dp</dimen>
+    <dimen name="line_width">0.5dp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+    <dimen name="header_height">49dp</dimen>
+
+    <!--corner-->
     <dimen name="btn_corner">18dp</dimen>
     <dimen name="edit_corner">17.5dp</dimen>
     <dimen name="card_corner">12dp</dimen>
+    <dimen name="dialog_corner">12dp</dimen>
 
-    <dimen name="line_width">0.5dp</dimen>
 
+    <!--padding-->
     <dimen name="page_padding">12dp</dimen>
-    <dimen name="item_margin">8dp</dimen>
+    <dimen name="image_padding">15dp</dimen>
 
+    <!--size-->
+    <dimen name="text_size_title">18dp</dimen>
     <dimen name="text_size">16dp</dimen>
+    <dimen name="text_size_0">14dp</dimen>
+    <dimen name="header_btn_size">25dp</dimen>
+
+    <!--margin-->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_margin">8dp</dimen>
+    <dimen name="margin1">14dp</dimen>
+    <dimen name="margin2">22dp</dimen>
+    <dimen name="margin3">25dp</dimen>
+    <dimen name="width_1">120dp</dimen>
+    <dimen name="edit_padding">12dp</dimen>
 </resources>

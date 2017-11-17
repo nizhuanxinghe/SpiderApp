@@ -13,6 +13,20 @@ public class SpiderRequestBean {
 
     private String macAddress;
     private String rootUrl;
+    private String urlClass;
+    private String headClass;
+    private String pageClass;
+    private String objClass;
+
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public String getMacAddress() {
         return macAddress;
@@ -28,5 +42,37 @@ public class SpiderRequestBean {
 
     public void setRootUrl(String url) {
         this.rootUrl = url;
+    }
+
+    public String getUrlClass() {
+        return urlClass;
+    }
+
+    public void setUrlClass(String urlClass) {
+        this.urlClass = urlClass;
+    }
+
+    public String getHeadClass() {
+        return headClass;
+    }
+
+    public void setHeadClass(String headClass) {
+        this.headClass = headClass;
+    }
+
+    public String getPageClass() {
+        return pageClass;
+    }
+
+    public void setPageClass(String pageClass) {
+        this.pageClass = pageClass;
+    }
+
+    public String getObjClass() {
+        return objClass;
+    }
+
+    public void setObjClass(String objClass) {
+        this.objClass = objClass;
     }
 }
