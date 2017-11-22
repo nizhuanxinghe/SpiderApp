@@ -80,8 +80,6 @@ public class SheetManageActivity extends BaseActivity implements ICapSheetView, 
 
         LogUtil.d(">>>>>>>>>>>>>>>>>>>>>>>>>>showSheetList<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
-        LogUtil.d(data + "");
-
         SheetRecyclerAdapter adapter = new SheetRecyclerAdapter(data, getLayoutInflater(), new SheetRecyclerAdapter.ItemSelectListener() {
             @Override
             public void onChecked(int index) {
@@ -100,12 +98,13 @@ public class SheetManageActivity extends BaseActivity implements ICapSheetView, 
             case R.id.btn_getSheet:
                 SpiderRequestBean data = new SpiderRequestBean();
                 data.setMacAddress(DeviceUtil.getLocalMacAddress(this));
-                data.setContent(mEditContent.getText().toString());
+                data.setFilter(mEditContent.getText().toString());
                 data.setRootUrl(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_ROOT_URL));
-                data.setHeadClass(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_HEAD_CLASS));
+                data.setUrlTag(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_URL_TAG));
                 data.setPageClass(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_PAGE_CLASS));
-                data.setUrlClass(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_URL_CLASS));
+                data.setPageTitle(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_PAGE_TITLE));
                 data.setObjClass(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_OBJ_CLASS));
+                data.setObjTagClass(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_OBJ_TAB_CLASS));
                 mICapSheetPresenter.capGuitarSheet(data);
                 break;
             case R.id.textView_config:

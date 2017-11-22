@@ -23,6 +23,7 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
     private EditText mEditHeadClass;
     private EditText mEditPageClass;
     private EditText mEditObjClass;
+    private EditText mEditObjTabClass;
 
     private Button mBtnSave;
     private ImageView mBtnBack;
@@ -44,16 +45,18 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
         mEditHeadClass = (EditText) findViewById(R.id.editText_headTitle);
         mEditPageClass = (EditText) findViewById(R.id.editText_pageClass);
         mEditObjClass = (EditText) findViewById(R.id.editText_objClass);
+        mEditObjTabClass = (EditText) findViewById(R.id.editText_objTabClass);
 
         mBtnSave = (Button) findViewById(R.id.btn_saveConfig);
         mBtnBack = (ImageView) findViewById(R.id.btn_back);
 
 
         mEditRootUrl.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_ROOT_URL));
-        mEditUrlClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_URL_CLASS));
-        mEditHeadClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_HEAD_CLASS));
+        mEditUrlClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_URL_TAG));
+        mEditHeadClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_PAGE_TITLE));
         mEditPageClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_PAGE_CLASS));
         mEditObjClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_OBJ_CLASS));
+        mEditObjTabClass.setText(PreferenceUtils.getString(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, Config.PreferenceConfig.KEY_OBJ_TAB_CLASS));
     }
 
     @Override
@@ -100,13 +103,15 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
         String head_class = mEditHeadClass.getText().toString();
         String page_class = mEditPageClass.getText().toString();
         String obj_class = mEditObjClass.getText().toString();
+        String obj_tab_class = mEditObjTabClass.getText().toString();
 
         Map<String, String> params = new HashMap<>();
         params.put(Config.PreferenceConfig.KEY_ROOT_URL, root_url);
-        params.put(Config.PreferenceConfig.KEY_URL_CLASS, url_class);
-        params.put(Config.PreferenceConfig.KEY_HEAD_CLASS, head_class);
+        params.put(Config.PreferenceConfig.KEY_URL_TAG, url_class);
+        params.put(Config.PreferenceConfig.KEY_PAGE_TITLE, head_class);
         params.put(Config.PreferenceConfig.KEY_PAGE_CLASS, page_class);
         params.put(Config.PreferenceConfig.KEY_OBJ_CLASS, obj_class);
+        params.put(Config.PreferenceConfig.KEY_OBJ_TAB_CLASS,obj_tab_class);
 
         PreferenceUtils.insertDatas(MyApplication.getInstances(), Config.PreferenceConfig.SETTING_PARAM, params);
 

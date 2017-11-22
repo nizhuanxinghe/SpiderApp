@@ -6,27 +6,24 @@ package com.example.chuwenbin.spiderapp.ui.mvp.bean;
 
 public class SpiderRequestBean {
 
+
     /**
-     * macAddress : ssssss
-     * rootUrl : sss
+     * macAddress : a
+     * rootUrl : b
+     * urlTag : base
+     * pageTitle : 吉他谱
+     * pageClass : pg
+     * objClass : xi2
      */
 
     private String macAddress;
     private String rootUrl;
-    private String urlClass;
-    private String headClass;
+    private String urlTag;
+    private String pageTitle;
     private String pageClass;
     private String objClass;
-
-    private String content;
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
+    private String objTagClass;
+    private String filter;
 
     public String getMacAddress() {
         return macAddress;
@@ -40,24 +37,24 @@ public class SpiderRequestBean {
         return rootUrl;
     }
 
-    public void setRootUrl(String url) {
-        this.rootUrl = url;
+    public void setRootUrl(String rootUrl) {
+        this.rootUrl = rootUrl;
     }
 
-    public String getUrlClass() {
-        return urlClass;
+    public String getUrlTag() {
+        return urlTag;
     }
 
-    public void setUrlClass(String urlClass) {
-        this.urlClass = urlClass;
+    public void setUrlTag(String urlTag) {
+        this.urlTag = urlTag;
     }
 
-    public String getHeadClass() {
-        return headClass;
+    public String getPageTitle() {
+        return pageTitle;
     }
 
-    public void setHeadClass(String headClass) {
-        this.headClass = headClass;
+    public void setPageTitle(String pageTitle) {
+        this.pageTitle = pageTitle;
     }
 
     public String getPageClass() {
@@ -74,5 +71,21 @@ public class SpiderRequestBean {
 
     public void setObjClass(String objClass) {
         this.objClass = objClass;
+    }
+
+    public String getFilter() {
+        return filter;
+    }
+
+    public void setFilter(String filter) {
+        this.filter = filter;
+    }
+
+    public String getObjTagClass() {
+        return objTagClass;
+    }
+
+    public void setObjTagClass(String objTagClass) {
+        this.objTagClass = objTagClass;
     }
 }

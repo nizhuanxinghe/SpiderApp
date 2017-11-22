@@ -29,6 +29,7 @@ public class ICapSheetBiz extends IBiz {
         Gson gson = new Gson();
         String jsonStr = gson.toJson(data);
         params.put("data", jsonStr);
+        LogUtil.d(jsonStr);
         RequestManager.getInstance(context).requestAsyn(Config.NetConfig.GET_GUITAR_SHEET_URL, RequestManager.TYPE_POST_JSON, params, new RequestManager.ReqCallBack<String>() {
 
             @Override

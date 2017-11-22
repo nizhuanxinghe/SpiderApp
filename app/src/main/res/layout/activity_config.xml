@@ -21,9 +21,10 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:gravity="center"
             android:textSize="@dimen/text_size_title"
             android:textColor="@color/text_color_white"
-            android:text="爬谱洛夫"/>
+            android:text="参数设置"/>
 
         <ImageView
             android:id="@+id/btn_back"
@@ -90,7 +91,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text="url class:"
+            android:text="base url tag:"
             android:padding="@dimen/page_padding"
             />
 
@@ -125,7 +126,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text="head title:"
+            android:text="obj page title:"
             android:padding="@dimen/page_padding"/>
 
         <EditText
@@ -159,45 +160,11 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text="page class:"
+            android:text=" page class:"
             android:padding="@dimen/page_padding"/>
 
         <EditText
             android:id="@+id/editText_pageClass"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/edit_height"
-            android:background="@drawable/drawable_edit_normal"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_size"
-            android:textColor="@color/text_color_gray"
-            android:text=""
-            android:paddingLeft="@dimen/edit_padding"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_fifth"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_fourth"
-        android:gravity="center_vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp">
-
-        <TextView
-            android:layout_width="@dimen/width_1"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size"
-            android:textColor="@color/text_color_gray"
-            android:text="obj class:"
-            android:padding="@dimen/page_padding"/>
-
-        <EditText
-            android:id="@+id/editText_objClass"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/edit_height"
             android:background="@drawable/drawable_edit_normal"
@@ -224,4 +191,74 @@
         android:text="Save"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_fifth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_fourth"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <TextView
+            android:layout_width="@dimen/width_1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="obj tab class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_objTabClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sixth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_fifth"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <TextView
+            android:layout_width="@dimen/width_1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="obj class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_objClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
