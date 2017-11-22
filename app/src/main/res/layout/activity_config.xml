@@ -7,18 +7,53 @@
     android:layout_height="match_parent"
     tools:context="com.example.chuwenbin.spiderapp.ui.mvp.activity.ConfigActivity">
 
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:background="@drawable/drawable_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="@dimen/width_1"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/text_color_white"
+            android:text="参数设置"/>
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin1"
+            android:paddingTop="@dimen/image_padding"
+            android:paddingBottom="@dimen/image_padding"
+            android:src="@mipmap/icon_top_return_2x"/>
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/layout_first"
-        android:layout_width="344dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         android:gravity="center_vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width_1"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
@@ -33,26 +68,32 @@
             android:layout_weight="1"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text=""/>
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layout_sec"
-        android:layout_width="344dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_first"
         android:gravity="center_vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width_1"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text="url class:"
-            android:padding="@dimen/page_padding"/>
+            android:text="base url tag:"
+            android:padding="@dimen/page_padding"
+            />
 
         <EditText
             android:id="@+id/editText_urlClass"
@@ -62,25 +103,30 @@
             android:layout_weight="1"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text=""/>
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layout_third"
-        android:layout_width="344dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_sec"
         android:gravity="center_vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width_1"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text="head title:"
+            android:text="obj page title:"
             android:padding="@dimen/page_padding"/>
 
         <EditText
@@ -91,25 +137,30 @@
             android:layout_weight="1"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text=""/>
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layout_fourth"
-        android:layout_width="344dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_third"
         android:gravity="center_vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width_1"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text="page class:"
+            android:text=" page class:"
             android:padding="@dimen/page_padding"/>
 
         <EditText
@@ -120,36 +171,8 @@
             android:layout_weight="1"
             android:textSize="@dimen/text_size"
             android:textColor="@color/text_color_gray"
-            android:text=""/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_fifth"
-        android:layout_width="344dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_fourth"
-        android:gravity="center_vertical"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size"
-            android:textColor="@color/text_color_gray"
-            android:text="obj class:"
-            android:padding="@dimen/page_padding"/>
-
-        <EditText
-            android:id="@+id/editText_objClass"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/edit_height"
-            android:background="@drawable/drawable_edit_normal"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_size"
-            android:textColor="@color/text_color_gray"
-            android:text=""/>
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
     </LinearLayout>
 
     <Button
@@ -165,5 +188,77 @@
         android:layout_marginRight="20dp"
         android:textSize="@dimen/text_size"
         android:textColor="@color/text_color_white"
-        android:text="Save"/>
+        android:text="Save"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_fifth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_fourth"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <TextView
+            android:layout_width="@dimen/width_1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="obj tab class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_objTabClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sixth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_fifth"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <TextView
+            android:layout_width="@dimen/width_1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text="obj class:"
+            android:padding="@dimen/page_padding"/>
+
+        <EditText
+            android:id="@+id/editText_objClass"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/drawable_edit_normal"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/text_color_gray"
+            android:text=""
+            android:paddingLeft="@dimen/edit_padding"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
