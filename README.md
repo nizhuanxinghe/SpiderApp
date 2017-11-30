@@ -8,12 +8,12 @@
 
 2、该过程会向服务器提交设置好的参数，服务器会通过这些参数爬取吉他谱的相关内容
 
-![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled2.gif)
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled3.gif)
 
 
 3、服务器收到请求
 
-![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled3.gif)
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled2.gif)
 
 
 ![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled4.gif)
