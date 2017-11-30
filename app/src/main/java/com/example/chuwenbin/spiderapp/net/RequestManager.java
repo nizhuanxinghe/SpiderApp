@@ -271,9 +271,9 @@ public class RequestManager {
     }
 
     /**
-     * okHttp post异步请求
+     * okHttp post 异步请求
      *
-     * @param url 接口地址
+     * @param url       接口地址
      * @param paramsMap 请求参数
      * @param callBack  请求返回数据回调
      * @param <T>       数据泛型
