@@ -29,6 +29,8 @@
 
 ![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled5.gif)
 
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled6.gif)
+
 
 
 - 爬虫服务器的代码见：
