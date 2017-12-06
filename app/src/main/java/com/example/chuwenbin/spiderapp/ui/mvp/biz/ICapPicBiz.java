@@ -11,26 +11,26 @@ import com.google.gson.Gson;
 import java.util.HashMap;
 
 /**
- * Created by chuwenbin on 17/11/9.
+ * Created by chuwenbin on 17/12/5.
  */
 
-public class ICapSheetBiz extends IBiz {
+public class ICapPicBiz {
 
     private Context mContext;
 
-    public ICapSheetBiz(Context context) {
+    public ICapPicBiz(Context context) {
         this.mContext = context;
     }
 
-    public void capGuitarSheet(final Context context, SpiderRequestBean data, final RequestListener requestListener) {
+    public void capPics(final Context context, SpiderRequestBean data, final IBiz.RequestListener requestListener) {
 
-        LogUtil.d("url:" + Config.NetConfig.GET_GUITAR_SHEET_URL);
+        LogUtil.d("url:" + Config.NetConfig.GET_PICS_URL);
         HashMap<String, String> params = new HashMap<>();
         Gson gson = new Gson();
         String jsonStr = gson.toJson(data);
         params.put("data", jsonStr);
         LogUtil.d(jsonStr);
-        RequestManager.getInstance(context).requestAsyn(Config.NetConfig.GET_GUITAR_SHEET_URL, RequestManager.TYPE_POST_JSON, params, new RequestManager.ReqCallBack<String>() {
+        RequestManager.getInstance(context).requestAsyn(Config.NetConfig.GET_PICS_URL, RequestManager.TYPE_POST_JSON, params, new RequestManager.ReqCallBack<String>() {
 
             @Override
             public void onReqSuccess(String result) {

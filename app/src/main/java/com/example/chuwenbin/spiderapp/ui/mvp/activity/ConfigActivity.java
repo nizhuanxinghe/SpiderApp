@@ -28,7 +28,6 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
     private Button mBtnSave;
     private ImageView mBtnBack;
 
-
     private boolean isSave = false;
 
     @Override

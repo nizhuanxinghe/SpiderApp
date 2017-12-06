@@ -306,7 +306,7 @@ public class RequestManager {
                 public void onResponse(Call call, Response response) throws IOException {
                     if (response.isSuccessful()) {
                         String string = response.body().string();
-                        Log.e(TAG, "response ----->" + string);
+//                        Log.e(TAG, "response ----->" + string);
                         successCallBack((T) string, callBack);
                     }
                     else {

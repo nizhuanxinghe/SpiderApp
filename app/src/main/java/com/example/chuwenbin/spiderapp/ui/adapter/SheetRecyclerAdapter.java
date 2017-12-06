@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.chuwenbin.spiderapp.R;
-import com.example.chuwenbin.spiderapp.ui.mvp.bean.GuitarSheetBean;
+import com.example.chuwenbin.spiderapp.ui.mvp.bean.resp.GuitarSheetBean;
 import com.example.chuwenbin.spiderapp.utils.LogUtil;
 
 /**

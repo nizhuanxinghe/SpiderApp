@@ -58,32 +58,63 @@
         <LinearLayout
             android:id="@+id/layout_top"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/editText_sheet"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:layout_weight="1"
-                android:layout_margin="8dp"
-                android:hint="请输入关键词"
-                android:textSize="14dp"
-                android:background="@drawable/drawable_edit_normal"
-                android:paddingLeft="8dp"/>
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <EditText
+                    android:id="@+id/editText_sheet"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:hint="请输入关键词"
+                    android:textSize="14dp"
+                    android:background="@drawable/drawable_edit_normal"
+                    android:paddingLeft="8dp"/>
 
-            <Button
-                android:id="@+id/btn_getSheet"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/btn_height"
-                android:background="@drawable/drawable_btn"
-                android:textSize="14dp"
-                android:textColor="@color/white"
-                android:text="do"/>
+                <Button
+                    android:id="@+id/btn_getSheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@drawable/drawable_btn"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:text="do"/>
+            </LinearLayout>
 
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/radio_sheet">
+                <RadioButton
+                    android:id="@+id/radio_sheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吉他谱"
+                    android:textSize="@dimen/text_size_0"
+                    android:textColor="@color/text_color_gray"
+                    android:layout_weight="1"
+                    android:button="@drawable/drawable_radio_button"/>
+                <RadioButton
+                    android:id="@+id/radio_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图片"
+                    android:textSize="@dimen/text_size_0"
+                    android:textColor="@color/text_color_gray"
+                    android:layout_weight="1"
+                    android:button="@drawable/drawable_radio_button"/>
+            </RadioGroup>
 
         </LinearLayout>
 

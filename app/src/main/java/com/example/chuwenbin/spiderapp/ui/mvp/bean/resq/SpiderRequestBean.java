@@ -1,4 +1,4 @@
-package com.example.chuwenbin.spiderapp.ui.mvp.bean;
+package com.example.chuwenbin.spiderapp.ui.mvp.bean.resq;
 
 /**
  * Created by chuwenbin on 17/11/10.
@@ -24,6 +24,7 @@ public class SpiderRequestBean {
     private String objClass;
     private String objTagClass;
     private String filter;
+    private String action;
 
     public String getMacAddress() {
         return macAddress;
@@ -87,5 +88,13 @@ public class SpiderRequestBean {
 
     public void setObjTagClass(String objTagClass) {
         this.objTagClass = objTagClass;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 }
