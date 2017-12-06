@@ -1,4 +1,4 @@
-package com.example.chuwenbin.spiderapp.ui.mvp.bean;
+package com.example.chuwenbin.spiderapp.ui.mvp.bean.resp;
 
 import java.util.List;
 

@@ -16,13 +16,15 @@
 
 
     <!--padding-->
+    <dimen name="img_padding">8dp</dimen>
     <dimen name="page_padding">12dp</dimen>
     <dimen name="image_padding">15dp</dimen>
 
     <!--size-->
-    <dimen name="text_size_title">18dp</dimen>
-    <dimen name="text_size">16dp</dimen>
-    <dimen name="text_size_0">14dp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_size_0">14sp</dimen>
+    <dimen name="text_size_mini">10sp</dimen>
     <dimen name="header_btn_size">25dp</dimen>
 
     <!--margin-->

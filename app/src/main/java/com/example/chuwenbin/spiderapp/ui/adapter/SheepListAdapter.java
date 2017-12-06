@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.chuwenbin.spiderapp.R;
-import com.example.chuwenbin.spiderapp.ui.mvp.bean.GuitarSheetBean;
+import com.example.chuwenbin.spiderapp.ui.mvp.bean.resp.GuitarSheetBean;
 
 /**
  * Created by chuwenbin on 17/11/9.
