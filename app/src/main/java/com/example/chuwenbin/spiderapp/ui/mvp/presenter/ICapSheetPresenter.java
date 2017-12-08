@@ -37,7 +37,6 @@ public class ICapSheetPresenter {
         mContext = mICapSheetView.getContext();
         mICapSheetBiz = new ICapSheetBiz(mContext);
         mICapPicBiz = new ICapPicBiz(mContext);
-
     }
 
     public synchronized void capGuitarSheet(SpiderRequestBean data) {
@@ -57,7 +56,6 @@ public class ICapSheetPresenter {
                         mICapSheetView.showSheetList(mGuitarSheetBean);
                     }
                 });
-
             }
 
             @Override

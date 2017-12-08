@@ -26,7 +26,7 @@
             android:layout_centerVertical="true"
             android:textSize="@dimen/text_size_title"
             android:textColor="@color/text_color_white"
-            android:text="扒谱懦夫"/>
+            android:text="@string/app_title"/>
 
         <!--<ImageView-->
             <!--android:id="@+id/btn_back"-->
@@ -95,7 +95,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:checkedButton="@+id/radio_sheet">
+                android:checkedButton="@+id/radio_sheet"
+                android:layout_marginLeft="10dp">
                 <RadioButton
                     android:id="@+id/radio_sheet"
                     android:layout_width="wrap_content"

@@ -39,7 +39,6 @@ public class SheetWebActivity extends BaseActivity {
     @Override
     void initView() {
         setContentView(R.layout.activity_sheet_web);
-
         mWebViewSheet = (WebView) findViewById(R.id.webView_sheet);
     }
 
