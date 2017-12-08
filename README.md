@@ -7,27 +7,35 @@
 - 该过程会向服务器提交设置好的参数，服务器会通过这些参数爬取吉他谱的相关内容
 
 
-![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled.gif)
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/dev/extra/Untitled.gif)
 
 
 - 按关键字搜索指定内容
 
 
-![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled3.gif)
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/dev/extra/Untitled3.gif)
 
 
 
 - 服务器收到请求
 
 
-![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled2.gif)
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/dev/extra/Untitled2.gif)
+
+
+
+- 增加一个试验性功能，通过客户端操控远程服务器爬取表情包
+
+
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/dev/extra/Untitled7.gif)
+
 
 
 
 - 一点体会
 
 
-![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled6.gif)
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/dev/extra/Untitled6.gif)
 
 
 
