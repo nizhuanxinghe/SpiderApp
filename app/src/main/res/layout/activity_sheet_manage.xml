@@ -26,7 +26,7 @@
             android:layout_centerVertical="true"
             android:textSize="@dimen/text_size_title"
             android:textColor="@color/text_color_white"
-            android:text="扒谱懦夫"/>
+            android:text="@string/app_title"/>
 
         <!--<ImageView-->
             <!--android:id="@+id/btn_back"-->
