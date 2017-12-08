@@ -24,6 +24,14 @@
 
 
 
+- 增加一个试验性功能，通过客户端操控远程服务器爬取表情包
+
+
+![image](https://github.com/nizhuanxinghe/SpiderApp/blob/master/extra/Untitled7.gif)
+
+
+
+
 - 一点体会
 
 
