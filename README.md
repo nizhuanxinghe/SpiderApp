@@ -1,5 +1,9 @@
 ## 一个app，用于获得远程服务器爬取的数据：
 
+```
+概述：这份代码遵循mvp架构，用到的框架有：数据库(greendao)、网络请求(okhttp)、图片加载(glide)、ui(RecyclerView\CardView\ConstraintLayout)、json(gson/gsonFormat)。
+```
+
 
 - 允许设置爬取网站的相关参数，有一定爬虫基础的人自然懂的如何使用
 
